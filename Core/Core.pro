@@ -9,6 +9,8 @@ QT       -= gui
 TARGET = Core
 TEMPLATE = lib
 
+CONFIG += c++14
+
 DEFINES += CORE_LIBRARY
 
 # The following define makes your compiler emit warnings if you use
@@ -25,7 +27,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += core.cpp
 
 HEADERS += core.h\
-        core_global.h
+        core_global.h \
+    basealgoritm.h
 
 unix {
     target.path = /usr/lib
