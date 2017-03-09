@@ -2,4 +2,5 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     Core \
-    CoreTest
+    CoreTest \
+    DemoModul

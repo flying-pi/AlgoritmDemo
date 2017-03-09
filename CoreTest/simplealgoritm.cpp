@@ -9,8 +9,8 @@ SimpleAlgoritm::SimpleAlgoritm() {}
 int SimpleAlgoritm::mull(int a, int b) {
   int result = 0;
   forI(b, b > 0, b--, {
-    if (result > 100)
-      break;
+    //    if (result > 100)
+    //      break;
     result += a;
   });
   return result;

@@ -1,18 +1,15 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-02-26T18:24:20
+# Project created by QtCreator 2017-03-01T23:53:24
 #
 #-------------------------------------------------
+
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Core
-TEMPLATE = lib
-
-CONFIG += c++14
-
-DEFINES += CORE_LIBRARY
+TARGET = DemoModul
+TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked as deprecated (the exact warnings
@@ -25,21 +22,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-SOURCES += core.cpp \
-    uiElements/graphwidget.cpp \
-    graphADT/basegraphadt.cpp \
-    graphADT/matrixbasegraph.cpp
 
-HEADERS += core.h\
-        core_global.h \
-    basealgoritm.h \
-    graphADT/igraph.h \
-    uiElements/graphwidget.h \
-    graphADT/basegraphadt.h \
-    graphADT/matrixbasegraph.h \
-    utils.h
+SOURCES += main.cpp\
+        mainwindow.cpp
 
-unix {
-    target.path = /usr/lib
-    INSTALLS += target
-}
+HEADERS  += mainwindow.h
+
+FORMS    += mainwindow.ui
