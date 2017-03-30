@@ -27,19 +27,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += core.cpp \
     uiElements/graphwidget.cpp \
-    graphADT/basegraphadt.cpp \
-    graphADT/matrixbasegraph.cpp
+    uiElements/graphdrawe.cpp \
+    creategraphform.cpp \
+    creategraphwidget.cpp \
+    listbasegraph.cpp
 
 HEADERS += core.h\
         core_global.h \
     basealgoritm.h \
-    graphADT/igraph.h \
     uiElements/graphwidget.h \
-    graphADT/basegraphadt.h \
-    graphADT/matrixbasegraph.h \
-    utils.h
+    utils.h \
+    igraph.h \
+    uiElements/graphdrawe.h \
+    creategraphform.h \
+    creategraphwidget.h \
+    listbasegraph.h
 
 unix {
     target.path = /usr/lib
     INSTALLS += target
 }
+
+
+FORMS += \
+    creategraphform.ui

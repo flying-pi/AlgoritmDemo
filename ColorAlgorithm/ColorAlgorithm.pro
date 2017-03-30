@@ -1,15 +1,15 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-03-01T23:53:24
+# Project created by QtCreator 2017-03-28T11:03:21
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       -= gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+TARGET = ColorAlgorithm
+TEMPLATE = lib
 
-TARGET = DemoModul
-TEMPLATE = app
+DEFINES += COLORALGORITHM_LIBRARY
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked as deprecated (the exact warnings
@@ -22,17 +22,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+SOURCES += coloralgorithm.cpp
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+HEADERS += coloralgorithm.h\
+        coloralgorithm_global.h
 
-HEADERS  += mainwindow.h
-
-FORMS    += mainwindow.ui
-
-win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../Core/release/ -lCore
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../Core/debug/ -lCore
-else:unix: LIBS += -L$$OUT_PWD/../Core/ -lCore
-
-INCLUDEPATH += $$PWD/../Core
-DEPENDPATH += $$PWD/../Core
+unix {
+    target.path = /usr/lib
+    INSTALLS += target
+}

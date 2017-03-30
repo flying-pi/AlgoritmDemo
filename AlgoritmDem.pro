@@ -2,5 +2,6 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     Core \
-    CoreTest \
-    DemoModul
+    DemoModul \
+    ColorAlgorithm \
+    CoreTest
